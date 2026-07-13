@@ -1,244 +1,110 @@
-# 📁 Project Reports
+# 📁 Reports Directory
 
-> This directory contains automatically maintained reports generated throughout the development lifecycle.
+> This directory contains automatically maintained project reports generated and updated by Gemini throughout the development lifecycle.
 >
-> The reporting system provides documentation for developers, project managers, and clients by organizing project information into focused reports. Together, these reports serve as the project's living documentation and development history.
+> Each report has a single responsibility to keep documentation organized, prevent duplication, and provide quick access to project information.
 
 ---
 
-# Report Overview
+# Reports
 
-| Report | Purpose | Audience |
-|---------|----------|----------|
-| **PROJECT.md** | High-level dashboard and current project status | Everyone |
-| **DEVELOPMENT.md** | Development journal, coding sessions, changelog | Developers |
-| **FEATURES.md** | Features, bugs, roadmap, and technical debt | Developers / PM |
-| **ANALYTICS.md** | Development metrics, AI usage, repository statistics | Developers / PM |
-| **DOCUMENTATION.md** | Technical architecture and project reference | Developers |
-| **CLIENT.md** | Client-friendly progress report | Client |
-| **PROJECT_MEMORY.md** | Long-term project knowledge and design decisions | Developers |
-
----
-
-# Quick Navigation
-
-## 🚀 Current Project Status
-
-View:
-
-📄 **PROJECT.md**
-
-Contains
-
-- Current progress
-- Project health
-- Active milestone
-- Deliverables
-- Recent activity
-- Blockers
+| Report | Description |
+|---------|-------------|
+| **PROJECT.md** | High-level project dashboard showing current status, progress, milestones, blockers, and overall health. |
+| **DEVELOPMENT.md** | Complete development journal including coding sessions, AI prompt history, changelog, deployments, and repository activity. |
+| **FEATURES.md** | Tracks completed, active, planned, and future features, bugs, enhancements, technical debt, and release readiness. |
+| **ANALYTICS.md** | Development metrics including hours, productivity, AI contribution, Git activity, performance, and project statistics. |
+| **DOCUMENTATION.md** | Technical reference for the current architecture, project structure, APIs, database, components, deployment, and configuration. |
+| **CLIENT.md** | Non-technical progress report summarizing completed work, current development, deliverables, timeline, and client action items. |
+| **KNOWLEDGE_BASE.md** | Long-term project knowledge including design decisions, client preferences, lessons learned, architectural reasoning, and future ideas. |
 
 ---
 
-## 💻 Development History
+# Which Report Should I Update?
 
-View:
-
-📄 **DEVELOPMENT.md**
-
-Contains
-
-- Development sessions
-- Prompt history
-- Code changes
-- Deployments
-- Repository activity
-- Architectural decisions
+| If you changed... | Update |
+|-------------------|--------|
+| Project status or milestone | PROJECT.md |
+| Code or development sessions | DEVELOPMENT.md |
+| Features, bugs, or roadmap | FEATURES.md |
+| Hours, commits, AI metrics | ANALYTICS.md |
+| Architecture or APIs | DOCUMENTATION.md |
+| Client-facing progress | CLIENT.md |
+| Design decisions or lessons learned | KNOWLEDGE_BASE.md |
 
 ---
 
-## 📋 Feature Tracking
+# Report Relationships
 
-View:
-
-📄 **FEATURES.md**
-
-Contains
-
-- Active features
-- Planned features
-- Completed work
-- Bugs
-- Technical debt
-- Release roadmap
-
----
-
-## 📊 Analytics
-
-View:
-
-📄 **ANALYTICS.md**
-
-Contains
-
-- Development hours
-- AI contribution
-- Productivity
-- Repository metrics
-- Performance metrics
-- Code statistics
+```text
+                PROJECT.md
+                     │
+      ┌──────────────┼──────────────┐
+      │              │              │
+ DEVELOPMENT.md   FEATURES.md   ANALYTICS.md
+      │              │
+      └──────────────┼──────────────┐
+                     │              │
+          DOCUMENTATION.md    KNOWLEDGE_BASE.md
+                     │
+                     │
+                CLIENT.md
+```
 
 ---
 
-## 📚 Technical Documentation
+# Update Philosophy
 
-View:
+Each report has a dedicated purpose.
 
-📄 **DOCUMENTATION.md**
+- **PROJECT.md** is the dashboard.
+- **DEVELOPMENT.md** records history.
+- **FEATURES.md** tracks project scope.
+- **ANALYTICS.md** measures progress.
+- **DOCUMENTATION.md** describes the current implementation.
+- **CLIENT.md** communicates progress to the client.
+- **KNOWLEDGE_BASE.md** preserves project knowledge.
 
-Contains
-
-- Architecture
-- Folder structure
-- APIs
-- Database
-- Components
-- Deployment
-- Configuration
+Information should exist in **one report only** whenever possible.
 
 ---
 
-## 🤝 Client Report
+# Gemini Responsibilities
 
-View:
+Gemini should automatically:
 
-📄 **CLIENT.md**
-
-Contains
-
-- Completed work
-- Current work
-- Deliverables
-- Timeline
-- Progress
-- Upcoming milestones
+- Update reports after meaningful development sessions.
+- Keep metrics synchronized across reports.
+- Preserve historical information.
+- Remove obsolete technical documentation.
+- Avoid duplicate information between reports.
+- Write client reports using non-technical language.
+- Record architectural decisions and lessons learned.
+- Maintain consistent formatting throughout the REPORTS directory.
 
 ---
 
-## 🧠 Project Memory
-
-View:
-
-📄 **PROJECT_MEMORY.md**
-
-Contains
-
-- Design decisions
-- Client preferences
-- Lessons learned
-- Constraints
-- Future ideas
-- Architectural reasoning
-
----
-
-# Report Update Workflow
+# Reporting Workflow
 
 ```text
 Development Session
-          │
-          ▼
-Gemini Analyzes Changes
-          │
-          ▼
-──────────────────────────────────────
-│ PROJECT.md        → Dashboard
-│ DEVELOPMENT.md    → Journal
-│ FEATURES.md       → Roadmap
-│ ANALYTICS.md      → Metrics
-│ DOCUMENTATION.md  → Technical Docs
-│ CLIENT.md         → Client Summary
-│ PROJECT_MEMORY.md → Long-Term Memory
-──────────────────────────────────────
+        │
+        ▼
+Analyze Repository Changes
+        │
+        ▼
+Determine Affected Reports
+        │
+        ▼
+Update Relevant Report(s)
+        │
+        ▼
+Synchronize Shared Metrics
+        │
+        ▼
+Complete
 ```
 
 ---
 
-# Reporting Guidelines
-
-The reports follow these principles:
-
-- Every report has a single responsibility.
-- Information should only exist in one report whenever possible.
-- Historical information is preserved unless explicitly obsolete.
-- Technical documentation reflects the current implementation.
-- Client documentation avoids technical jargon.
-- Metrics are cumulative and automatically updated.
-- Development history is append-only.
-
----
-
-# Report Responsibilities
-
-| Information | Report |
-|-------------|--------|
-| Current project status | PROJECT.md |
-| Development sessions | DEVELOPMENT.md |
-| AI prompts | DEVELOPMENT.md |
-| Changelog | DEVELOPMENT.md |
-| Features | FEATURES.md |
-| Bugs | FEATURES.md |
-| Roadmap | FEATURES.md |
-| Technical debt | FEATURES.md |
-| Development hours | ANALYTICS.md |
-| AI metrics | ANALYTICS.md |
-| Repository statistics | ANALYTICS.md |
-| Architecture | DOCUMENTATION.md |
-| APIs | DOCUMENTATION.md |
-| Components | DOCUMENTATION.md |
-| Client updates | CLIENT.md |
-| Deliverables | CLIENT.md |
-| Design rationale | PROJECT_MEMORY.md |
-| Client preferences | PROJECT_MEMORY.md |
-| Lessons learned | PROJECT_MEMORY.md |
-
----
-
-# Development Workflow
-
-```text
-Start Session
-      │
-      ▼
-Code Changes
-      │
-      ▼
-Commit Changes
-      │
-      ▼
-Gemini Updates Reports
-      │
-      ▼
-Review Reports
-      │
-      ▼
-Push Repository
-```
-
----
-
-# Maintenance
-
----
-
-# Last Report Update
-
-Date:
-
-Gemini Version:
-
-Project Version:
-
-Current Milestone:
-
-Overall Completion:
+> **Note:** These reports complement the project's root `README.md`. The root README explains **how to use the project**, while the files in this directory document **how the project evolves over time**.
